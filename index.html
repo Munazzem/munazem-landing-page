@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>منظم - تطبيق ولي الأمر | تحميل الأندرويد والآيفون PWA</title>
+  <meta name="description" content="حمّل تطبيق منظم لولي الأمر الآن لمتابعة حضور وغياب ودرجات ومصروفات الطالب أولاً بأول للأندرويد APK والآيفون PWA." />
+  <meta name="theme-color" content="#0f4c81" />
+
+  <!-- Open Graph / Meta -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="منظم - تطبيق ولي الأمر" />
+  <meta property="og:description" content="منظومة منظم في يد كل ولي أمر. تابع حضور وغياب ودرجات ابنك لحظة بلحظة." />
+  <meta property="og:image" content="assets/logo.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" />
+
+  <!-- Google Fonts: Cairo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Config Script -->
+  <script src="config.js"></script>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="#" class="brand-wrapper">
+        <img src="assets/logo.png" alt="شعار منظم" class="brand-logo" />
+        <div class="brand-text">
+          <h1>مُنظِّم</h1>
+          <span>تطبيق ولي الأمر</span>
+        </div>
+      </a>
+
+      <div class="nav-actions">
+        <a id="navWhatsappBtn" href="#" target="_blank" rel="noopener" class="btn-nav-support">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+          </svg>
+          الدعم الفني
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="container hero-grid">
+      <!-- Text & CTA -->
+      <div class="hero-content">
+        <div class="badge-live">
+          <span class="pulse-dot"></span>
+          <span>الإصدار 1.0.0 متاح الآن لجميع أولياء الأمور</span>
+        </div>
+
+        <h2 class="hero-title">
+          منظومة <span class="highlight">مُنظِّم</span> في يد كل ولي أمر
+        </h2>
+
+        <p class="hero-description">
+          تابع حضور وغياب ابنك، مواعيد الحصص القادمة، درجات الامتحانات الشهرية، وكشف المصروفات والاشتراكات لحظة بلحظة وبكل سهولة من هاتفك.
+        </p>
+
+        <div class="hero-cta-group">
+          <!-- Android APK Jump/Download -->
+          <a href="#android-section" class="btn-primary-android" id="heroAndroidBtn">
+            <div class="btn-icon-wrapper">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.551 0 .9993.4482.9993.9993.0001.5511-.4483.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993 0 .5511-.4482.9997-.9993.9997m11.4045-6.02l1.996-3.4566c.1126-.1951.0456-.4445-.1496-.5571-.1951-.1127-.4445-.0457-.5571.1495l-2.0238 3.5053c-1.5501-.7086-3.2842-1.1077-5.147-1.1077-1.8628 0-3.5969.3991-5.147 1.1077l-2.0238-3.5053c-.1126-.1952-.362-.2622-.5571-.1495-.1952.1126-.2622.362-.1496.5571l1.996 3.4566C4.469 10.5905 2.222 13.9103 2 17.8427h20c-.222-3.9324-2.469-7.2522-6.1185-8.5213"/>
+              </svg>
+            </div>
+            <div class="btn-text-block">
+              <span class="btn-label-sm">تحميل مباشر للأندرويد</span>
+              <span class="btn-label-lg">ملف APK (104 MB)</span>
+            </div>
+          </a>
+
+          <!-- iPhone PWA Jump/Launch -->
+          <a href="#ios-section" class="btn-primary-ios" id="heroIosBtn">
+            <div class="btn-icon-wrapper">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.61-.75 1.04-1.8 1.01-2.87-.96.04-2.14.65-2.82 1.44-.59.68-1.12 1.76-1.02 2.82 1.08.08 2.22-.64 2.83-1.39z"/>
+              </svg>
+            </div>
+            <div class="btn-text-block">
+              <span class="btn-label-sm">لأجهزة الآيفون (iOS)</span>
+              <span class="btn-label-lg">تطبيق الويب (PWA)</span>
+            </div>
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <h4>100%</h4>
+            <p>دقة تسجيل الحضور</p>
+          </div>
+          <div class="stat-item">
+            <h4>فوري</h4>
+            <p>إشعارات WhatsApp والتطبيق</p>
+          </div>
+          <div class="stat-item">
+            <h4>مجاني</h4>
+            <p>لجميع أولياء الأمور</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Smartphone Mockup Preview -->
+      <div class="phone-mockup-container">
+        <div class="mockup-ambient-glow"></div>
+        <div class="phone-frame">
+          <div class="phone-notch"></div>
+          <div class="phone-screen">
+            <!-- App Header in Mockup -->
+            <div class="mockup-app-header">
+              <div class="mockup-user-info">
+                <div class="mockup-avatar">م</div>
+                <div>
+                  <h5>مرحباً، ولي الأمر</h5>
+                  <span>طالب: أحمد محمد فرغلي</span>
+                </div>
+              </div>
+              <img src="assets/logo.png" alt="logo" style="width: 24px; height: 24px; border-radius: 6px;" />
+            </div>
+
+            <!-- Card 1: Attendance Today -->
+            <div class="mockup-card">
+              <div class="mockup-card-title">حالة حضور اليوم</div>
+              <div class="mockup-card-value">حاضر (الحصة 1)</div>
+              <span class="mockup-status-badge">تم تسجيل الحضور 04:30 م</span>
+            </div>
+
+            <!-- Card 2: Student QR Card -->
+            <div class="mockup-card">
+              <div class="mockup-card-title">كارت الطالب الذكي</div>
+              <div class="mockup-qr-box">
+                <svg viewBox="0 0 100 100">
+                  <rect width="100" height="100" fill="#fff" />
+                  <rect x="10" y="10" width="25" height="25" fill="#0f172a" />
+                  <rect x="15" y="15" width="15" height="15" fill="#fff" />
+                  <rect x="18" y="18" width="9" height="9" fill="#0f172a" />
+                  <rect x="65" y="10" width="25" height="25" fill="#0f172a" />
+                  <rect x="70" y="15" width="15" height="15" fill="#fff" />
+                  <rect x="73" y="18" width="9" height="9" fill="#0f172a" />
+                  <rect x="10" y="65" width="25" height="25" fill="#0f172a" />
+                  <rect x="15" y="70" width="15" height="15" fill="#fff" />
+                  <rect x="18" y="73" width="9" height="9" fill="#0f172a" />
+                  <rect x="45" y="20" width="10" height="10" fill="#0f172a" />
+                  <rect x="45" y="45" width="10" height="10" fill="#0f172a" />
+                  <rect x="65" y="55" width="12" height="12" fill="#0f172a" />
+                  <rect x="75" y="75" width="15" height="15" fill="#0f172a" />
+                </svg>
+                <div class="mockup-qr-label">كود الطالب: #STU-9542</div>
+              </div>
+            </div>
+
+            <!-- Card 3: Latest Exam Result -->
+            <div class="mockup-card" style="margin-bottom: 0;">
+              <div class="mockup-card-title">آخر نتيجة امتحان (فيزياء)</div>
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 4px;">
+                <span class="mockup-card-value">28 / 30</span>
+                <span style="color: #38bdf8; font-size: 12px; font-weight: 700;">ممتاز (93%)</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Platforms Grid: Android (APK) & iPhone (PWA) -->
+  <section class="container" id="download-section">
+    <div class="section-title-wrap">
+      <h2>اختر نوع جهازك للبدء في استخدام التطبيق</h2>
+      <p>تطبيق منظم متاح لأجهزة الأندرويد بملف تثبيت مباشر، ولأجهزة الآيفون كتطبيق ويب تقدمي (PWA) فائق السرعة.</p>
+    </div>
+
+    <div class="platforms-grid">
+      <!-- 1. Android APK Card -->
+      <div class="platform-card" id="android-section">
+        <span class="card-badge-top badge-android">للأندرويد (Android)</span>
+
+        <div class="card-header-os">
+          <div class="os-icon-box" style="color: #34d399;">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.523 15.3414c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.551 0 .9993.4482.9993.9993.0001.5511-.4483.9997-.9993.9997m-11.046 0c-.5511 0-.9993-.4486-.9993-.9997s.4482-.9993.9993-.9993c.5511 0 .9993.4482.9993.9993 0 .5511-.4482.9997-.9993.9997m11.4045-6.02l1.996-3.4566c.1126-.1951.0456-.4445-.1496-.5571-.1951-.1127-.4445-.0457-.5571.1495l-2.0238 3.5053c-1.5501-.7086-3.2842-1.1077-5.147-1.1077-1.8628 0-3.5969.3991-5.147 1.1077l-2.0238-3.5053c-.1126-.1952-.362-.2622-.5571-.1495-.1952.1126-.2622.362-.1496.5571l1.996 3.4566C4.469 10.5905 2.222 13.9103 2 17.8427h20c-.222-3.9324-2.469-7.2522-6.1185-8.5213"/>
+            </svg>
+          </div>
+          <div>
+            <h3>تحميل تطبيق الأندرويد</h3>
+            <p>ملف تثبيت مباشر (APK) يعمل على كافة هواتف أندرويد</p>
+          </div>
+        </div>
+
+        <div class="file-meta-pills">
+          <div class="meta-pill">
+            <span>الإصدار:</span>
+            <strong id="cardApkVersion">1.0.0</strong>
+          </div>
+          <div class="meta-pill">
+            <span>الحجم:</span>
+            <strong id="cardApkSize">104 MB</strong>
+          </div>
+          <div class="meta-pill" style="color: #34d399;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <strong>تم الفحص وآمن 100%</strong>
+          </div>
+        </div>
+
+        <a id="directApkDownloadBtn" href="https://github.com/Munazzem/munazem/releases/download/v1.0.0/application-a9ce1254-2c1c-458d-984f-04e7852d87d7.apk" class="card-action-btn btn-apk-download">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+            <polyline points="7 10 12 15 17 10"></polyline>
+            <line x1="12" y1="15" x2="12" y2="3"></line>
+          </svg>
+          تحميل ملف التطبيق (104 MB)
+        </a>
+
+        <div class="install-steps-title">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+          خطوات التثبيت على الأندرويد:
+        </div>
+
+        <ul class="steps-list">
+          <li class="step-item">
+            <span class="step-num">1</span>
+            <div>اضغط على <strong>تحميل ملف التطبيق</strong> أعلاه وانتظر اكتمال التنزيل.</div>
+          </li>
+          <li class="step-item">
+            <span class="step-num">2</span>
+            <div>
+              إذا ظهر تنبيه <em>"قد يكون الملف ضاراً"</em>، اضغط <strong>تنزيل على أي حال</strong> (هذا تحذير أمني معتاد من جوجل عند تنزيل أي تطبيق خارج متجر Play).
+            </div>
+          </li>
+          <li class="step-item">
+            <span class="step-num">3</span>
+            <div>
+              افتح الملف المحمل واضغط <strong>تثبيت (Install)</strong>، ثم اسمح لمتصفحك بـ <em>"التثبيت من هذا المصدر"</em> عند المطالبة.
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- 2. iPhone iOS PWA Card -->
+      <div class="platform-card" id="ios-section">
+        <span class="card-badge-top badge-ios">للآيفون (iPhone iOS)</span>
+
+        <div class="card-header-os">
+          <div class="os-icon-box" style="color: #38bdf8;">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.37c.61-.75 1.04-1.8 1.01-2.87-.96.04-2.14.65-2.82 1.44-.59.68-1.12 1.76-1.02 2.82 1.08.08 2.22-.64 2.83-1.39z"/>
+            </svg>
+          </div>
+          <div>
+            <h3>تطبيق الويب للآيفون (PWA)</h3>
+            <p>يعمل مباشرة من متصفح Safari ويثبت كـ تطبيق كامل</p>
+          </div>
+        </div>
+
+        <div class="file-meta-pills">
+          <div class="meta-pill">
+            <span>النوع:</span>
+            <strong>PWA أصلي</strong>
+          </div>
+          <div class="meta-pill">
+            <span>المساحة:</span>
+            <strong>فوري بدون استهلاك للذاكرة</strong>
+          </div>
+          <div class="meta-pill" style="color: #38bdf8;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            <strong>تحديثات سحابية فورية</strong>
+          </div>
+        </div>
+
+        <a id="directIosPwaBtn" href="./app/" target="_blank" class="card-action-btn btn-pwa-launch">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+          </svg>
+          تشغيل تطبيق الويب للآيفون الآن
+        </a>
+
+        <div class="install-steps-title">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+          طريقة تثبيت التطبيق على شاشة الآيفون (Safari):
+        </div>
+
+        <ul class="steps-list">
+          <li class="step-item">
+            <span class="step-num">1</span>
+            <div>
+              اضغط على زر <strong>تشغيل تطبيق الويب</strong> أعلاه ليفتح معك في متصفح <strong>Safari</strong> على جهازك.
+            </div>
+          </li>
+          <li class="step-item">
+            <span class="step-num">2</span>
+            <div>
+              اضغط على زر <strong>المشاركة</strong>
+              <span class="safari-icon-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" y1="2" x2="12" y2="15"></line></svg>
+              </span>
+              (مربع بسهم للأعلى) في أسفل شاشة Safari.
+            </div>
+          </li>
+          <li class="step-item">
+            <span class="step-num">3</span>
+            <div>
+              مرر القائمة لأسفل ثم اختر <strong>"إضافة إلى الشاشة الرئيسية" (Add to Home Screen ➕)</strong>.
+            </div>
+          </li>
+          <li class="step-item">
+            <span class="step-num">4</span>
+            <div>
+              اضغط على <strong>"إضافة" (Add)</strong> أعلى اليمين. سيظهر تطبيق منظم فوراً بأيقونته الرسمية على شاشتك الرئيسية كتطبيق أصلي وشاشة كاملة!
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Grid -->
+  <section class="features-section">
+    <div class="container">
+      <div class="section-title-wrap">
+        <h2>كل ما يحتاجه ولي الأمر في مكان واحد</h2>
+        <p>صُمم تطبيق منظم ليربطك بكل تفاصيل دراسة وحضور ابنك في تجربة مستخدم سلسة ومباشرة.</p>
+      </div>
+
+      <div class="features-grid">
+        <!-- 1 -->
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="8.5" cy="7.5" r="4"></circle><polyline points="17 11 19 13 23 9"></polyline></svg>
+          </div>
+          <h3>متابعة الحضور والغياب</h3>
+          <p>إشعار فوري عند تسجيل حضور الطالب أو تأخره أو غيابه عن الحصة مع ذكر الوقت والمجموعة والمدرس بدقة تامة.</p>
+        </div>
+
+        <!-- 2 -->
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+          </div>
+          <h3>كارت الطالب الذكي (QR)</h3>
+          <p>كارت رقمي يحمل باركود وكود QR خاص بكل طالب يمكن مسحه بالكاميرا لتسجيل الحضور وتوثيق المعاملات فوراً.</p>
+        </div>
+
+        <!-- 3 -->
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          </div>
+          <h3>تقارير ودرجات الاختبارات</h3>
+          <p>اطّلع على درجات الامتحانات والتقييمات الدورية ومستوى تقدم الطالب مع متوسطات المجموعات أولاً بأول.</p>
+        </div>
+
+        <!-- 4 -->
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+          </div>
+          <h3>كشف المصروفات والاشتراكات</h3>
+          <p>سجل مالي شفاف يوضح الاشتراكات الشهرية المدفوعة والمتبقية مع تفاصيل كل دفعة وتاريخها بدقة ووضوح.</p>
+        </div>
+
+        <!-- 5 -->
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+          </div>
+          <h3>إشعارات وتنبيهات فورية</h3>
+          <p>تصلك إشعارات وتنبيهات مستمرة على هاتفك بشأن أي تحديثات دراسية أو مواعيد مجموعات أو رسائل من المعلمين.</p>
+        </div>
+
+        <!-- 6 -->
+        <div class="feature-card">
+          <div class="feature-icon-box">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          </div>
+          <h3>حماية وخصوصية تامة</h3>
+          <p>جميع بيانات الطالب وولي الأمر مشفرة بالكامل ولا يمكن الوصول إليها إلا عبر رقم هاتف ولي الأمر المعتمد أو كارت الطالب.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <div class="container">
+      <div class="section-title-wrap">
+        <h2>الأسئلة الشائعة</h2>
+        <p>إجابات سريعة على أهم الاستفسارات التي تهم أولياء الأمور</p>
+      </div>
+
+      <div class="faq-list">
+        <!-- Item 1 -->
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>هل تطبيق منظم مجاني لولي الأمر؟</span>
+            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            نعم، التطبيق مجاني 100% لجميع أولياء الأمور، ولا يتم فرض أي رسوم على تحميله أو استخدامه لمتابعة الأبناء.
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>كيف أسجل الدخول للتطبيق أول مرة؟</span>
+            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            بكل بساطة، افتح التطبيق واختر مسح كارت الطالب الذكي بالكاميرا، أو أدخل رقم هاتفك المسجل لدى السنتر/المدرس وسيتم التعرف تلقائياً على أبنائك المسجلين.
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>لماذا يظهر تحذير أمني عند تحميل ملف الأندرويد APK؟</span>
+            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            هذا إجراء روتيني طبيعي من نظام الأندرويد عند تنزيل أي تطبيق عبر المتصفح وليس من متجر Google Play. الملف سليم ومفحوص بالكامل، ويمكنك الضغط على "تنزيل على أي حال" وتثبيته بأمان تام.
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>هل يمكن استخدام التطبيق لأكثر من ابن في نفس الوقت؟</span>
+            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            نعم، يدعم التطبيق متابعة جميع أبنائك من حساب واحد، ويمكنك التبديل بين ملفاتهم بلمسة واحدة لمتابعة حضور ودرجات كل ابن بشكل منفصل.
+          </div>
+        </div>
+
+        <!-- Item 5 -->
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>هل سأحتاج لإعادة تحميل التطبيق عند وجود أي تحديث جديد؟</span>
+            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </button>
+          <div class="faq-answer">
+            لا، تطبيق الآيفون (PWA) وتطبيق الأندرويد يدعمان التحديث التلقائي السحابي، فبمجرد إطلاق ميزة جديدة ستظهر لديك تلقائياً دون الحاجة لإعادة التثبيت.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="brand-wrapper">
+        <img src="assets/logo.png" alt="logo" class="brand-logo" style="width: 36px; height: 36px;" />
+        <div class="brand-text">
+          <h1 style="font-size: 16px;">مُنظِّم</h1>
+          <span style="font-size: 11px;">تطبيق ولي الأمر الذكي</span>
+        </div>
+      </div>
+
+      <div class="footer-copy">
+        جميع الحقوق محفوظة لمنصة مُنظِّم &copy; <span id="yearSpan">2026</span>
+      </div>
+
+      <div class="footer-links">
+        <a id="footerWhatsappBtn" href="#" target="_blank" rel="noopener">تواصل مع الدعم الفني</a>
+        <a href="#android-section">تحميل الأندرويد</a>
+        <a href="#ios-section">تطبيق الآيفون</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Page Logic Script -->
+  <script src="script.js"></script>
+</body>
+</html>

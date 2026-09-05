@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>منظم - تطبيق ولي الأمر</title>
+    
+    <!-- PWA & Apple iOS Tags -->
+    <meta name="theme-color" content="#0f4c81" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="منظم" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="application-name" content="منظم" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    
+    <!-- Icons & Manifest -->
+    <link rel="icon" href="./favicon.ico" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+    <link rel="manifest" href="./manifest.json" />
+    
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <style id="expo-reset">
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: #0a192f;
+        font-family: 'Cairo', system-ui, -apple-system, sans-serif;
+        -webkit-tap-highlight-color: transparent;
+        user-select: none;
+        -webkit-user-select: none;
+      }
+      body {
+        overflow: hidden;
+      }
+      #root {
+        display: flex;
+        height: 100%;
+        flex: 1;
+      }
+      /* App Loading Indicator */
+      #app-loader {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: radial-gradient(circle at center, #132d56 0%, #0a192f 100%);
+        z-index: 99999;
+        transition: opacity 0.4s ease, visibility 0.4s ease;
+      }
+      #app-loader.hidden {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+      .loader-logo {
+        width: 100px;
+        height: 100px;
+        border-radius: 24px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 40px rgba(15, 76, 129, 0.5);
+        margin-bottom: 20px;
+        animation: pulseLogo 2s infinite ease-in-out;
+      }
+      .loader-spinner {
+        width: 36px;
+        height: 36px;
+        border: 3px solid rgba(255, 255, 255, 0.15);
+        border-top-color: #38bdf8;
+        border-radius: 50%;
+        animation: spin 0.9s linear infinite;
+        margin-bottom: 16px;
+      }
+      .loader-title {
+        color: #ffffff;
+        font-size: 18px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+      }
+      .loader-subtitle {
+        color: #94a3b8;
+        font-size: 13px;
+        margin-top: 4px;
+      }
+      @keyframes spin {
+        to { transform: rotate(360deg); }
+      }
+      @keyframes pulseLogo {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+      }
+    </style>
+  </head>
+
+  <body>
+    <noscript>
+      <div style="padding: 20px; color: white; text-align: center;">
+        يرجى تفعيل الجافاسكريبت لتشغيل تطبيق منظم.
+      </div>
+    </noscript>
+
+    <!-- Initial App Splash -->
+    <div id="app-loader">
+      <img src="./apple-touch-icon.png" alt="منظم" class="loader-logo" />
+      <div class="loader-spinner"></div>
+      <div class="loader-title">مُنظِّم - ولي الأمر</div>
+      <div class="loader-subtitle">جاري تجهيز بيانات التطبيق...</div>
+    </div>
+
+    <!-- Expo Root Element -->
+    <div id="root"></div>
+
+    <script>
+      // Hide splash loader once root renders content
+      const rootObserver = new MutationObserver(() => {
+        const root = document.getElementById('root');
+        if (root && root.children.length > 0) {
+          const loader = document.getElementById('app-loader');
+          if (loader) {
+            loader.classList.add('hidden');
+            setTimeout(() => loader.remove(), 500);
+          }
+          rootObserver.disconnect();
+        }
+      });
+      rootObserver.observe(document.getElementById('root'), { childList: true, subtree: true });
+
+      // Fallback timeout in case observer doesn't fire
+      setTimeout(() => {
+        const loader = document.getElementById('app-loader');
+        if (loader) {
+          loader.classList.add('hidden');
+          setTimeout(() => loader.remove(), 500);
+        }
+      }, 3500);
+
+      // Register Service Worker for PWA offline cache
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('./sw.js').catch((err) => {
+            console.log('[PWA] Service Worker registration failed:', err);
+          });
+        });
+      }
+    </script>
+
+    <!-- Expo Web Bundle (relative path so it works in /app/ or standalone domain) -->
+    <script src="./_expo/static/js/web/index-d724e9d4e28840a9f09c66bf86196186.js" defer></script>
+  </body>
+</html>

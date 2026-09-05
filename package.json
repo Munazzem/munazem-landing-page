@@ -1,0 +1,16 @@
+{
+  "name": "monazem-landing-pwa",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Munazzem Parent App Landing Page & iPhone PWA Web App",
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx serve ."
+  },
+  "keywords": [
+    "munazzem",
+    "parent-app",
+    "pwa",
+    "landing-page"
+  ]
+}
