@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <base href="/app/">
     <title>منظم - تطبيق ولي الأمر</title>
     
     <!-- PWA & Apple iOS Tags -->
@@ -16,9 +17,10 @@
     <meta name="apple-touch-fullscreen" content="yes" />
     
     <!-- Icons & Manifest -->
-    <link rel="icon" href="./favicon.ico" />
-    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
-    <link rel="manifest" href="./manifest.json" />
+    <link rel="icon" href="/app/favicon.ico" />
+    <link rel="apple-touch-icon" href="/app/apple-touch-icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="/app/apple-touch-icon.png" />
+    <link rel="manifest" href="/app/manifest.json" />
     
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -145,14 +147,14 @@
       // Register Service Worker for PWA offline cache
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-          navigator.serviceWorker.register('./sw.js').catch((err) => {
+          navigator.serviceWorker.register('/app/sw.js', { scope: '/app/' }).catch((err) => {
             console.log('[PWA] Service Worker registration failed:', err);
           });
         });
       }
     </script>
 
-    <!-- Expo Web Bundle (relative path so it works in /app/ or standalone domain) -->
-    <script src="./_expo/static/js/web/index-9ae6e1d135fb054994b92f5fb91e6662.js" defer></script>
+    <!-- Expo Web Bundle -->
+    <script src="/app/_expo/static/js/web/index-9ae6e1d135fb054994b92f5fb91e6662.js" defer></script>
   </body>
 </html>
