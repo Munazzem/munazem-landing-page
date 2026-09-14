@@ -2,8 +2,9 @@
   "name": "منظم - تطبيق ولي الأمر",
   "short_name": "منظم",
   "description": "تطبيق منصة منظم لمتابعة حضور وغياب ودرجات ومصروفات الطالب لأولياء الأمور",
-  "start_url": "./",
-  "scope": "./",
+  "id": "/app/",
+  "start_url": "/app/",
+  "scope": "/",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#0a192f",
@@ -11,17 +12,19 @@
   "dir": "rtl",
   "lang": "ar",
   "categories": ["education"],
+  "prefer_related_applications": false,
   "icons": [
     {
-      "src": "./apple-touch-icon.png",
-      "sizes": "192x192 512x512",
+      "src": "/app/apple-touch-icon.png",
+      "sizes": "180x180 192x192 512x512",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "./assets/icon.png",
+      "src": "/app/assets/icon.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ]
 }

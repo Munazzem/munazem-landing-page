@@ -4,12 +4,32 @@
   "trailingSlash": false,
   "rewrites": [
     {
+      "source": "/_expo/(.*)",
+      "destination": "/app/_expo/$1"
+    },
+    {
       "source": "/app/_expo/(.*)",
       "destination": "/app/_expo/$1"
     },
     {
       "source": "/app/assets/(.*)",
       "destination": "/app/assets/$1"
+    },
+    {
+      "source": "/manifest.json",
+      "destination": "/app/manifest.json"
+    },
+    {
+      "source": "/sw.js",
+      "destination": "/app/sw.js"
+    },
+    {
+      "source": "/apple-touch-icon.png",
+      "destination": "/app/apple-touch-icon.png"
+    },
+    {
+      "source": "/apple-touch-icon-precomposed.png",
+      "destination": "/app/apple-touch-icon.png"
     },
     {
       "source": "/app/manifest.json",
@@ -20,11 +40,55 @@
       "destination": "/app/sw.js"
     },
     {
+      "source": "/app/apple-touch-icon.png",
+      "destination": "/app/apple-touch-icon.png"
+    },
+    {
       "source": "/app",
       "destination": "/app/index.html"
     },
     {
       "source": "/app/(.*)",
+      "destination": "/app/index.html"
+    },
+    {
+      "source": "/Auth/(.*)",
+      "destination": "/app/index.html"
+    },
+    {
+      "source": "/Auth",
+      "destination": "/app/index.html"
+    },
+    {
+      "source": "/auth/(.*)",
+      "destination": "/app/index.html"
+    },
+    {
+      "source": "/auth",
+      "destination": "/app/index.html"
+    },
+    {
+      "source": "/child/(.*)",
+      "destination": "/app/index.html"
+    },
+    {
+      "source": "/home",
+      "destination": "/app/index.html"
+    },
+    {
+      "source": "/notifications",
+      "destination": "/app/index.html"
+    },
+    {
+      "source": "/attendance",
+      "destination": "/app/index.html"
+    },
+    {
+      "source": "/grades",
+      "destination": "/app/index.html"
+    },
+    {
+      "source": "/settings",
       "destination": "/app/index.html"
     }
   ],
