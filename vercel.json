@@ -1,19 +1,17 @@
 {
   "version": 2,
-  "cleanUrls": true,
-  "trailingSlash": false,
   "rewrites": [
     {
-      "source": "/_expo/(.*)",
-      "destination": "/app/_expo/$1"
+      "source": "/_expo/:path*",
+      "destination": "/app/_expo/:path*"
     },
     {
-      "source": "/app/_expo/(.*)",
-      "destination": "/app/_expo/$1"
+      "source": "/app/_expo/:path*",
+      "destination": "/app/_expo/:path*"
     },
     {
-      "source": "/app/assets/(.*)",
-      "destination": "/app/assets/$1"
+      "source": "/app/assets/:path*",
+      "destination": "/app/assets/:path*"
     },
     {
       "source": "/manifest.json",
@@ -48,11 +46,7 @@
       "destination": "/app/index.html"
     },
     {
-      "source": "/app/(.*)",
-      "destination": "/app/index.html"
-    },
-    {
-      "source": "/Auth/(.*)",
+      "source": "/app/:path*",
       "destination": "/app/index.html"
     },
     {
@@ -60,7 +54,7 @@
       "destination": "/app/index.html"
     },
     {
-      "source": "/auth/(.*)",
+      "source": "/Auth/:path*",
       "destination": "/app/index.html"
     },
     {
@@ -68,7 +62,111 @@
       "destination": "/app/index.html"
     },
     {
-      "source": "/child/(.*)",
+      "source": "/auth/:path*",
+      "destination": "/app/index.html"
+    },
+    {
+      "source": "/Welcome",
+      "destination": "/app/index.html"
+    },
+    {
+      "source": "/Welcome/:path*",
+      "destination": "/app/index.html"
+    },
+    {
+      "source": "/welcome",
+      "destination": "/app/index.html"
+    },
+    {
+      "source": "/welcome/:path*",
+      "destination": "/app/index.html"
+    },
+    {
+      "source": "/LoginChoice",
+      "destination": "/app/index.html"
+    },
+    {
+      "source": "/LoginChoice/:path*",
+      "destination": "/app/index.html"
+    },
+    {
+      "source": "/PhoneEntry",
+      "destination": "/app/index.html"
+    },
+    {
+      "source": "/PhoneEntry/:path*",
+      "destination": "/app/index.html"
+    },
+    {
+      "source": "/BarcodeScanner",
+      "destination": "/app/index.html"
+    },
+    {
+      "source": "/BarcodeScanner/:path*",
+      "destination": "/app/index.html"
+    },
+    {
+      "source": "/ManualBarcode",
+      "destination": "/app/index.html"
+    },
+    {
+      "source": "/ManualBarcode/:path*",
+      "destination": "/app/index.html"
+    },
+    {
+      "source": "/AutoDiscoveryConfirm",
+      "destination": "/app/index.html"
+    },
+    {
+      "source": "/AutoDiscoveryConfirm/:path*",
+      "destination": "/app/index.html"
+    },
+    {
+      "source": "/MainTabs",
+      "destination": "/app/index.html"
+    },
+    {
+      "source": "/MainTabs/:path*",
+      "destination": "/app/index.html"
+    },
+    {
+      "source": "/maintabs",
+      "destination": "/app/index.html"
+    },
+    {
+      "source": "/maintabs/:path*",
+      "destination": "/app/index.html"
+    },
+    {
+      "source": "/SelectChild",
+      "destination": "/app/index.html"
+    },
+    {
+      "source": "/SelectChild/:path*",
+      "destination": "/app/index.html"
+    },
+    {
+      "source": "/ChildDetails",
+      "destination": "/app/index.html"
+    },
+    {
+      "source": "/ChildDetails/:path*",
+      "destination": "/app/index.html"
+    },
+    {
+      "source": "/child",
+      "destination": "/app/index.html"
+    },
+    {
+      "source": "/child/:path*",
+      "destination": "/app/index.html"
+    },
+    {
+      "source": "/FinanceDetail",
+      "destination": "/app/index.html"
+    },
+    {
+      "source": "/FinanceDetail/:path*",
       "destination": "/app/index.html"
     },
     {
@@ -76,7 +174,15 @@
       "destination": "/app/index.html"
     },
     {
+      "source": "/home/:path*",
+      "destination": "/app/index.html"
+    },
+    {
       "source": "/notifications",
+      "destination": "/app/index.html"
+    },
+    {
+      "source": "/notifications/:path*",
       "destination": "/app/index.html"
     },
     {
@@ -84,17 +190,29 @@
       "destination": "/app/index.html"
     },
     {
+      "source": "/attendance/:path*",
+      "destination": "/app/index.html"
+    },
+    {
       "source": "/grades",
+      "destination": "/app/index.html"
+    },
+    {
+      "source": "/grades/:path*",
       "destination": "/app/index.html"
     },
     {
       "source": "/settings",
       "destination": "/app/index.html"
+    },
+    {
+      "source": "/settings/:path*",
+      "destination": "/app/index.html"
     }
   ],
   "headers": [
     {
-      "source": "/_expo/static/(.*)",
+      "source": "/_expo/static/:path*",
       "headers": [
         {
           "key": "Cache-Control",
@@ -103,7 +221,7 @@
       ]
     },
     {
-      "source": "/app/_expo/static/(.*)",
+      "source": "/app/_expo/static/:path*",
       "headers": [
         {
           "key": "Cache-Control",
@@ -112,7 +230,7 @@
       ]
     },
     {
-      "source": "/(.*)",
+      "source": "/:path*",
       "headers": [
         {
           "key": "X-Content-Type-Options",
